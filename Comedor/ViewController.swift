@@ -30,7 +30,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     //MARK: Actions
     @IBAction func LoadWebView(){
         reload.isHidden = true
-        let myPage = "http://abbott.humandatamanager.com"
+        let myPage = "http://abbott.humandatamanager.com/client"
         let url = NSURL.init(string: myPage)
         let request = NSURLRequest(url: url! as URL)
         //webView.delegate = self
