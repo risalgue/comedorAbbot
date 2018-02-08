@@ -29,8 +29,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     //MARK: Actions
     @IBAction func LoadWebView(){
+        let uuid = UIDevice.current.identifierForVendor?.uuidString
+        print("UIID \((uuid)!)")
         reload.isHidden = true
-        let myPage = "http://abbott.humandatamanager.com/client"
+        let myPage = "http://abbott.humandatamanager.com/client?\(uuid!)"
         let url = NSURL.init(string: myPage)
         let request = NSURLRequest(url: url! as URL)
         //webView.delegate = self
